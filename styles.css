@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Source+Code+Pro:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 300;
+}
+
+*::selection {
+  background-color: rgb(194, 58, 54);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(254, 180, 180);
+  background: radial-gradient(rgb(251, 151, 151) 0%, rgb(194, 58, 54) 100%);
+  font-family: "Montserrat", sans-serif;
+  color: #f4f7fa;
+}
+
+.pomodoro-app {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 350px;
+  background-color: #ffffff2a;
+  border-radius: 10px;
+}
+
+.pomodoro-container {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid rgb(194, 58, 54);
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+.set-length-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.session-length,
+.break-length {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#session-label,
+#break-label {
+  margin-bottom: 7px;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+}
+
+.session-spans,
+.break-spans {
+  display: flex;
+  align-items: center;
+}
+
+.session-spans span,
+.break-spans span {
+  margin: 0 4px;
+  padding: 3px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.session-spans span:active,
+.break-spans span:active {
+  transform: scale(97%);
+}
+
+#session-length,
+#break-length {
+  text-align: center;
+  width: 30px;
+  cursor: default;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#timer-label {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+}
+
+#time-left {
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+#time-left span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  font-family: "Source Code Pro", monospace;
+}
+
+.controls-container {
+  width: 55%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#start_stop,
+#reset {
+  width: 120px;
+  padding: 5px 8px;
+  background-color: rgb(255, 238, 238);
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0px 4px 2px 0px rgb(231, 214, 214);
+  font-size: 1.3rem;
+  color: rgb(194, 58, 54);
+  cursor: pointer;
+}
+
+#reset:active,
+#start_stop:active {
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.start_stop-active {
+  box-shadow: none !important;
+  transform: translateY(4px);
+}
